@@ -59,7 +59,7 @@ export default function (options, imports) {
   });
 
   clientRouter.post('/save', (req, res) => {
-    action.save(req.body.review, req.body.id)
+    action.saveReview(req.body.review, req.body.id)
       .then(() => {
         res.success('review saved');
       })
